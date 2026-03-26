@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: hsl(4, 100%, 67%);
+    --dark-blue: hsl(234, 29%, 20%);
+    --soft-blue: hsl(235, 18%, 26%);
+    --grey: hsl(0, 0%,58%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--soft-blue);
+    background: var(--soft-blue);
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    max-height: 100vh;
+    width: 50%;
+    background: var(--white);
+    border-radius: 20px;
+}
+
+.img_hover img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.paragraph{
+    margin-bottom: 15px;
+    font-size: 13px;
+    
+}
+
+.offers{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.offers div{
+    display: flex;
+    align-items:center;
+    margin: 3px 0;
+
+}
+
+.offers img{
+    padding: 0 20px 0 0;
+
+}
+
+.offers p{
+    font-size: 13px;
+}
+
+
+#email {
+    padding: 10px 110px 10px 20px;
+    margin: 5px 0;
+    border: solid 1.5px var(--grey);
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#submit {
+    padding: 10px 60px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: var(--dark-blue);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background: linear-gradient(to right, hsl(340, 71%, 56%), hsl(4, 100%, 67%));
+    border: solid 1.5px var(--primary);
+    box-shadow: 0px 6px 20px 0px hsla(4, 100%, 67%, 0.767);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px;text-align: center;   color: var(--white);
+    padding-top:  30px; 
+}
+
+.attribution a { 
+    color: var(--primary); 
+}
