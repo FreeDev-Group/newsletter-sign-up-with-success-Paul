@@ -34,13 +34,17 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    max-height: 100vh;
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     background: var(--white);
     border-radius: 20px;
 }
 
-.img_hover img{
+.img_hero {
+    width: 100%;
+}
+
+.img_hero img{
     width: 100%;
     object-fit: cover;
 }
@@ -53,18 +57,18 @@ body{
     padding: 20px;
     width: 100%;
     height: 100%;
+    gap: 15px;
 }
 
 h1{
     font-weight: 700;
     font-size: 40px;
     color: var(--dark-blue);
-    margin-bottom: 10px;
 }
 
-.paragraph{
-    margin-bottom: 15px;
-    font-size: 13px;
+.paragraph, .offers p {
+    font-size: 12px;
+    font-weight: 700;
     
 }
 
@@ -72,7 +76,6 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-bottom: 20px;
 }
 
 .offers div{
@@ -84,25 +87,42 @@ h1{
 
 .offers img{
     padding: 0 20px 0 0;
-
 }
-
-.offers p{
-    font-size: 13px;
-}
-
 
 #email {
-    padding: 10px 110px 10px 20px;
+    width: 90%;
+    padding: 10px 50px 10px 10px;
     margin: 5px 0;
     border: solid 1.5px var(--grey);
     border-radius: 5px;
     font-weight: 700;
-    cursor: pointer;
 }
 
-#submit {
-    padding: 10px 60px;
+#email .active {
+    background-color: rgba(242, 28, 57, 0.758);
+    border: var(--primary);
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 11px;
+}
+
+label .invalidEmail {
+color: var(--primary);
+display: none;
+}
+
+label .invalidEmail.active {
+    display: block;
+}
+
+#submit, .btn{
+    width: 90%;
+    padding: 10px 45px;
     margin: 5px 0;
     border-radius: 5px;
     background: var(--dark-blue);
@@ -113,67 +133,12 @@ h1{
     cursor: pointer;
 }
 
-#submit:hover{
-    background: linear-gradient(to right, hsl(340, 71%, 56%), hsl(4, 100%, 67%));
-    border: solid 1.5px var(--primary);
-    box-shadow: 0px 6px 20px 0px hsla(4, 100%, 67%, 0.767);
+#submit:hover, .btn:hover{
+    background: linear-gradient(to right, hsl(347, 76%, 52%), hsl(4, 100%, 67%));
+    border: solid 1.5px hsl(334, 100%, 77%);
+    box-shadow: 0px 6px 19px 0px hsla(4, 100%, 67%, 0.767);
+    transition: all 0.2s ease;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .attribution { 
     font-size: 11px;text-align: center;   color: var(--white);
@@ -182,4 +147,102 @@ h1{
 
 .attribution a { 
     color: var(--primary); 
+}
+
+.popupsuccess{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background: var(--white);
+    width: 100%;
+    max-width: 350px;
+    padding: 35px;
+    border-radius: 20px;
+    gap: 20px;
+    display: none;
+}
+
+.iconSuccess img{
+    width: 70%;
+}
+
+.popupsuccess h1{
+    font-size: 35px;
+    font-weight:700;
+}
+
+.popupsuccess p{
+    font-size: 12px;
+    gap: 15px;
+    color: var(--dark-blue);
+}
+
+.popupsuccess span{
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+@media (max-width: 900px){
+
+    .card{
+        flex-direction: column-reverse;
+        width: 90%;
+        
+    }
+
+    .img_hero{
+        width: 100%;
+    }
+
+    .img_hero img{
+        content: url("assets/images/illustration-sign-up-tablet.svg");
+        width: 100%;
+    }
+
+    .offers div{
+        margin: 8px 0;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    body{
+        padding: 20px;
+    }
+
+    .card{
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .img_hero img{
+        content: url("assets/images/illustration-sign-up-mobile.svg");
+
+    }
+
+    .offers {
+        margin: 1px 0;
+
+    }
+
+    /* Mobile success popup styling */
+    .popupsuccess {
+        width: 100%;
+        max-width: 340px;
+        background: var(--white);
+        border-radius: 20px;
+        padding: 24px;
+        display: none;
+    }
+
+    body.popup-open {
+        background-color: var(--white);
+        overflow: hidden;
+        color: var(--dark-blue);
+
+    }
+
 }
